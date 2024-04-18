@@ -10,10 +10,9 @@ You can view the public version of Task Dashboard here: [Go to Task Dashboard](h
 
 - Task creation: Users can add new tasks to the list.
 - Task Viewer: Easily view all current tasks with all the important details.
-- Edit tasks**: Make changes to existing tasks as needed.
-- Delete tasks**: Delete any task from the list.
+- Delete tasks: Delete any task from the list.
 - Filter tasks: Filter tasks by criteria such as Done, Active, and more.
-- Interactive UI**: User-friendly and easy-to-use interface.
+- Interactive UI: User-friendly and easy-to-use interface.
 
 ## Technologies
 
