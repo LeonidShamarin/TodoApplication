@@ -21,7 +21,7 @@ const TaskList: React.FC<TaskListProps> = ({
     .filter((task) => {
       if (filter === "completed") return task.completed;
       if (filter === "incomplete") return !task.completed;
-      return true; 
+      return true;
     })
     .filter((task) => {
       return (

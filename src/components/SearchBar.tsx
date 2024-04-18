@@ -6,7 +6,7 @@ interface SearchBarProps {
 
 const SearchBar: React.FC<SearchBarProps> = ({ setSearchQuery }) => {
   return (
-    <div className="searchbar">
+    <div>
       <input
         type="text"
         placeholder="Search tasks..."

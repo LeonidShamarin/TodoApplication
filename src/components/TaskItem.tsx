@@ -15,16 +15,28 @@ const TaskItem: React.FC<TaskItemProps> = ({
   return (
     <div className="task-item">
       <div>
-        <span
-          style={{ textDecoration: task.completed ? "line-through" : "none" }}
-        >
-          {task.title}
-        </span>
-        {task.description && <p>Description : {task.description}</p>}
+        <div className="title">
+          <span
+            style={{ textDecoration: task.completed ? "line-through" : "none" }}
+          >
+            {task.title}
+          </span>
+        </div>
+
+        <div className="description">
+          {task.description && <p>Description : {task.description}</p>}
+        </div>
       </div>
       <div>
-        <button onClick={() => toggleTaskCompletion(task.id)}>Complete</button>
-        <button onClick={() => deleteTask(task.id)}>Delete</button>
+        <button
+          className="btn-star"
+          onClick={() => toggleTaskCompletion(task.id)}
+        >
+          <i className="fas fa-star"></i>
+        </button>
+        <button className="btn-trash" onClick={() => deleteTask(task.id)}>
+          <i className="fas fa-trash"></i>
+        </button>
       </div>
     </div>
   );
