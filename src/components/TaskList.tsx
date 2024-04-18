@@ -1,6 +1,6 @@
-import React from 'react';
-import TaskItem from './TaskItem';
-import { Task } from '../types';
+import React from "react";
+import TaskItem from "./TaskItem";
+import { Task } from "../types";
 
 interface TaskListProps {
   tasks: Task[];
@@ -10,20 +10,30 @@ interface TaskListProps {
   searchQuery: string;
 }
 
-const TaskList: React.FC<TaskListProps> = ({ tasks, deleteTask, toggleTaskCompletion, filter, searchQuery }) => {
-  // Apply filters and search query
-  const filteredTasks = tasks.filter(task => {
-    if (filter === 'completed') return task.completed;
-    if (filter === 'incomplete') return !task.completed;
-    return true; // for 'all' filter
-  }).filter(task => {
-    return task.title.toLowerCase().includes(searchQuery.toLowerCase()) || 
-           (task.description && task.description.toLowerCase().includes(searchQuery.toLowerCase()));
-  });
+const TaskList: React.FC<TaskListProps> = ({
+  tasks,
+  deleteTask,
+  toggleTaskCompletion,
+  filter,
+  searchQuery,
+}) => {
+  const filteredTasks = tasks
+    .filter((task) => {
+      if (filter === "completed") return task.completed;
+      if (filter === "incomplete") return !task.completed;
+      return true; 
+    })
+    .filter((task) => {
+      return (
+        task.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        (task.description &&
+          task.description.toLowerCase().includes(searchQuery.toLowerCase()))
+      );
+    });
 
   return (
     <div>
-      {filteredTasks.map(task => (
+      {filteredTasks.map((task) => (
         <TaskItem
           key={task.id}
           task={task}

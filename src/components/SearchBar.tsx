@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 interface SearchBarProps {
   setSearchQuery: (query: string) => void;
@@ -6,11 +6,13 @@ interface SearchBarProps {
 
 const SearchBar: React.FC<SearchBarProps> = ({ setSearchQuery }) => {
   return (
-    <input
-      type="text"
-      placeholder="Search tasks..."
-      onChange={(e) => setSearchQuery(e.target.value)}
-    />
+    <div className="searchbar">
+      <input
+        type="text"
+        placeholder="Search tasks..."
+        onChange={(e) => setSearchQuery(e.target.value)}
+      />
+    </div>
   );
 };
 
