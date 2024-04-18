@@ -1,6 +1,6 @@
 # Task Dashboard
 
-Hello, this is the repository for Task Dashboard, a web-based task management application. It's a simple but powerful tool that allows users to create, view, edit, and delete tasks in a convenient way.
+Hello, this is the repository for Task Dashboard, a web-based task management application. It's a simple but powerful tool that allows users to create, view, and delete tasks in a convenient way.
 
 ## Demo
 
@@ -20,7 +20,6 @@ The project was developed using modern technologies, including:
 
 - React.js
 - CSS (with Flexbox/Grid support)
-- Node.js for backend (if applicable)
 - Jest for testing
 
 # Getting Started with Create React App
