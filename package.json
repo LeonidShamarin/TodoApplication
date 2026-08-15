@@ -1,4 +1,7 @@
 {
+  "engines": {
+    "node": "22.x"
+  },
   "name": "boardtask",
   "version": "0.1.0",
   "private": true,
